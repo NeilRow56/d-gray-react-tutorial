@@ -17,7 +17,8 @@ export default function Home() {
 
 
   return (
-    <div className='items-center justify-center w-full flex flex-col'>
+    
+    <div className=' flex w-full'>
       
       
       <ClientOnly>
@@ -27,5 +28,6 @@ export default function Home() {
       
      
     </div>
+    
   )
 }

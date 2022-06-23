@@ -11,7 +11,7 @@ const Content = () => {
       
   return (
     <Layout>
-    <main>
+    <main className='flex flex-col w-full items-center justify-center'>
         <p>Hello {handleNameChange()}</p>
     </main>
     </Layout>

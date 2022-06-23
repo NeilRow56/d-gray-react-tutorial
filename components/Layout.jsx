@@ -13,7 +13,7 @@ const Layout = ({ children, title='Book Best Hotels for your holiday'}) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
     
-      <div className='flex flex-col h-screen'>
+      <div className='flex flex-col h-screen w-full'>
         <Header />
      
       <div className=" flex flex-grow">
