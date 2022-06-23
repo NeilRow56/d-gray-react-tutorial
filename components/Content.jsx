@@ -1,43 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from './Layout'
 
 const Content = () => {
+    const [ name, setName ] = useState('Dave')
+    const [ count, setCount ] = useState(0)
 
     const handleNameChange = () => {
         const names= ["Bob", "Kevin", "Dave"]
         const int = Math.floor(Math.random( ) * 3)
-        return names[int]
+        setName(names[int])
       }
 
     const handleClick= () => {
-        console.log('You clicked it')
+        setCount(count + 1)    
+        setCount(count + 1)    
+        
+        console.log(count)
     }
 
-    const handleClick2= (name) => {
-        console.log(`${name} was clicked`)
+    const handleClick2= () => {
+        console.log(count)
     }
 
-    const handleClick3= (e) => {
-        console.log(e.target.innerText)
-    }
-      
+     
   return (
     <Layout>
     <main className='flex flex-col w-full items-center justify-center'>
         <p
         onDoubleClick={handleClick}
-        >Hello {handleNameChange()}</p>
+        >Hello {name}</p>
+        <button
+        className='primary-button mb-4'
+        onClick={handleNameChange}
+        >Change Name</button>
         <button
         className='primary-button mb-4'
         onClick={handleClick}
         >Click It</button>
         <button
-        className='primary-button mb-4'
-        onClick={() => handleClick2('Dave')}
-        >Click It</button>
-        <button
         className='primary-button'
-        onClick={(e) => handleClick3(e)}
+        onClick={handleClick2}
         >Click It</button>
     </main>
     </Layout>
