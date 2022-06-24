@@ -4,7 +4,7 @@ import Header from './Header'
 import Footer from './Footer'
 
 
-const Layout = ({ children, title='Book Best Hotels for your holiday'}) => {
+const Layout = ({ children, title='React Tutorial'}) => {
   return (
     <>
     <Head>
