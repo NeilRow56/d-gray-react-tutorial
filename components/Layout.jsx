@@ -14,7 +14,7 @@ const Layout = ({ children, title='React Tutorial'}) => {
       </Head>
     
       <div className='flex flex-col h-screen w-full'>
-        <Header />
+        <Header title="Shopping List " />
      
       <div className=" flex flex-grow">
         {children}

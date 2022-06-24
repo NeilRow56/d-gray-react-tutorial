@@ -1,46 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FaTrashAlt} from 'react-icons/fa'
 import Layout from './Layout'
 
-const Content = () => {
-    const [ items, setItems ] = useState([
-        {
-            id: 1,
-            checked: true,
-            item: "One half pound bag of Cocoa Covered Almonds Unsalted"
-        },
-        {
-            id: 2,
-            checked: false,
-            item: "Item 2"
-        },
-        {
-            id: 3,
-            checked: false,
-            item: "item 3"
-        },
-    ])
+const Content = ({items, handleCheck, handleDelete }) => {
     
-    const handleCheck= (id) =>   {
-        const listItems = items.map((item) => item.id === id ? {...item, checked: !item.checked } : item)
-        setItems(listItems)
-        localStorage.setItem('shoppinglist', JSON.stringify(listItems))
-    }
-
-    const handleDelete = ( id ) => {
-        const listItems = items.filter((item)  => item.id !== id )
-        setItems(listItems)
-        localStorage.setItem('shoppinglist', JSON.stringify(listItems))
-    }
-    
-     
-  return (
+return (
     <Layout>
-    <main className='flex flex-col w-full items-center justify-center'>
+    <main className='flex flex-col w-full items-center mt-10'>
         {items.length ? (
         <ul >
             {items.map((item) => (
-                <li key={item.id} className='w-full flex items-center justify-center bg-gray-200 border-b border-gray-400'>
+                <li key={item.id} className='w-full flex items-center  bg-gray-200 border-b border-gray-400'>
                     <input
                     className='mx-2 w-8 h-8 '
                      type="checkbox"
