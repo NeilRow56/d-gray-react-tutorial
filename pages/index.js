@@ -42,6 +42,7 @@ const handleDelete = ( id ) => {
   localStorage.setItem('shoppinglist', JSON.stringify(listItems))
 }
 
+
   return (
     
     <div className=' flex w-full'>
@@ -52,6 +53,7 @@ const handleDelete = ( id ) => {
           items = {items}
           handleCheck={handleCheck}
           handleDelete={handleDelete}
+          
         />
       </ClientOnly>
       

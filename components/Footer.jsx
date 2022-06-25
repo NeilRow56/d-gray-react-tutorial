@@ -4,7 +4,9 @@ const Footer = () => {
 const today = new Date()
 
   return (
-    <footer className='bg-blue-600 text-white text-center'>Copyright &copy; {today.getFullYear()}</footer>
+    <footer className='bg-blue-600 text-white text-center'>Copyright &copy; {today.getFullYear()} </footer>
+   
+
   )
 }
 
